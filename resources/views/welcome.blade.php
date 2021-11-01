@@ -3,19 +3,29 @@
 @section('title', 'HDC Events')
 
 @section('content')
-
-<div>
-    <h1>Welcome</h1>
-    @if (10 > 5)
-    <p>Olá {{$nome}}</p>
-    @endif
-
-    @for($i = 0; $i < count($arr); $i++) <p>{{$arr[$i]}}</p>
-        @endfor
-
-        @foreach($nomes as $nome)
-        <p>{{$nome}}</p>
-        @endforeach
+<div class="container-content">
+    <div id="search-container" class="col-md-12">
+        <h1>Busque um evento</h1>
+        <form action="">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Procurar..." />
+        </form>
+    </div>
+    <div id="events-container" class="col-md-12">
+        <h2>Proximos Eventos</h2>
+        <p class="subtitle">Veja os eventos dos proximos dias</p>
+        <div id="cards-container" class="row">
+            @foreach($events as $event)
+            <div class="card col-md-3">
+                <img src="/img/event_placeholder.jpg" alt="{{ $event->title}}">
+                <div class="card-body">
+                    <p class="card-date">10/09/2020</p>
+                    <h5 class="card-title">{{$event->title}}</h5>
+                    <p class="card-participants">X Participantes</p>
+                    <a href="#" class="btn btn-primary">Saber mais</a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </div>
-
 @endsection

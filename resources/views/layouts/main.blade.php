@@ -20,18 +20,18 @@
 </head>
 
 <body>
-    <div>
+    <div class="main-container">
         <header class="navbar navbar-expand-lg navbar-light">
             <div class="collapse navbar-collapse" id="navbar">
                 <a href="/" class="navbar-brand">
-                    <div class="logo"></div>
+                    <img src="/img/hdcevents_logo.svg" alt="hdcevents">
                 </a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="/" class="nav-link">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/events/crate" class="nav-link">Criar Eventos</a>
+                        <a href="/events/create" class="nav-link">Criar Eventos</a>
                     </li>
                     <li class="nav-item">
                         <a href="/" class="nav-link">Entrar</a>
@@ -42,14 +42,22 @@
                 </ul>
             </div>
         </header>
-        @yield('content')
-
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    @if(session('msg'))
+                    <p class='msg'>{{ session('msg') }}</p>
+                    @endif
+                    @yield('content')
+                </div>
+            </div>
+        </main>
         <footer>
             <p>HDC Events &copy; 2021</p>
         </footer>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

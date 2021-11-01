@@ -1,12 +1,187 @@
-h1 {
-    color: red;
+* {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+header {
+    max-width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
 }
 
-.logo {
-    width: 50px;
-    height: 50px;
+.row {
+    margin: 0;
+}
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+.btn-primary {
+    background-color: #f2a340;
+    border: 2px solid #c28008;
+}
+.btn-primary:hover {
+    background-color: #c28008;
+    border-color: #c28008;
+}
+.msg {
+    background-color: #d4edda;
+    color: #115724;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    animation: msg 5s linear;
+    overflow: hidden;
+    font-size: 0;
+}
 
-    border-radius: 40%;
-    border: 5px solid yellow;
-    background: yellowgreen;
+/*Animations*/
+@keyframes msg {
+    0% {
+        padding: 0;
+        height: 0;
+        border: 1px solid #c3e6cd;
+        font-size: 1rem;
+    }
+    10% {
+        border: 1px solid #c3e6cd;
+        padding: 10px;
+        height: 100%;
+        font-size: 1rem;
+    }
+    90% {
+        border: 1px solid #c3e6cd;
+        padding: 10px;
+        height: 100%;
+        font-size: 1rem;
+    }
+    100% {
+        height: 0;
+        border: 0;
+        padding: 0;
+        font-size: 0;
+    }
+}
+
+/*Navbar*/
+#navbar {
+    background-color: #fff;
+    justify-content: space-between;
+    padding: 5px 1vw;
+}
+#navbar img {
+    max-width: 50px;
+}
+#navbar a {
+    font-size: 14px;
+    color: #757575;
+}
+#navbar a:hover {
+    color: #f2a340;
+}
+
+/*search container*/
+#search-container {
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+}
+#search-container h1 {
+    color: #f2a340;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form {
+    width: 50%;
+    margin: 0 auto;
+}
+.container-content {
+    padding: 0;
+}
+
+/*Event List*/
+#events-container {
+    padding: 50px;
+}
+#events-container h2 {
+    margin-bottom: 10px;
+}
+#events-container .subtitle {
+    color: #757575;
+    margin-bottom: 30px;
+}
+#cards-container {
+    display: flex;
+}
+#events-container .card {
+    flex: 1 1 0;
+    max-width: 25%;
+    padding: 0;
+    margin: 5px;
+}
+#events-container img {
+    max-height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card .card-date {
+    font-size: 12px;
+    color: #ccc;
+}
+.card .card-title {
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.card-participants {
+    font-size: 14px;
+    color: #757575;
+}
+
+/*Events Create Page*/
+#event-create-container {
+    padding: 30px;
+}
+#event-create-container label {
+    font-weight: bold;
+}
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea {
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    background: #353e48;
+    color: #fff;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin-bottom: 0;
+}
+
+.main-container {
+    padding: 0;
+    margin: 0;
 }
