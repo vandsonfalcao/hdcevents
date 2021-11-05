@@ -22,6 +22,7 @@ class EventController extends Controller
     {
         $event = new Event;
         $event->title = $request->title;
+        $event->date = $request->date;
         $event->private = $request->private;
         $event->city = $request->city;
         $event->description = $request->description;
