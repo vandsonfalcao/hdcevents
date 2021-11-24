@@ -17,3 +17,5 @@ Route::get('/contact', function () {
 });
 
 Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
+
+Route::post('/events/join/{id}', [EventController::class, 'joinEvent'])->middleware('auth');
